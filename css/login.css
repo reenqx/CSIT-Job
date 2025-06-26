@@ -1,0 +1,95 @@
+/* --- พื้นหลัง Gradient ไล่สีส้ม-ม่วง --- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff8a00, #8e44ad);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- กล่องล็อกอินแบบ Glassmorphism --- */
+.container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* --- กล่องล็อกอิน --- */
+.login-box {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Form Layout --- */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Input และ Button --- */
+input,
+button {
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* --- Input แบบ Neumorphism --- */
+input {
+    width: 100%;
+    max-width: 300px;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1),
+                inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ff8a00, 0 0 20px #8e44ad;
+    border: 2px solid #ff8a00;
+}
+
+/* --- ปุ่ม Login แบบ Gradient + Neumorphism --- */
+button {
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff8a00, #8e44ad);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+                -2px -2px 5px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    outline: none; /* เพิ่มบรรทัดนี้เพื่อลบ default outline สีฟ้า */
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 576px) {
+    .login-box {
+        padding: 20px;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+}
+

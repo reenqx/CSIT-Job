@@ -1,0 +1,414 @@
+
+/* Base Styles */
+ * {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+    --purple: #4B0082;
+    --orange: #FF6B00;
+    --light-bg: #F5F7FA;
+    --white: #FFFFFF;
+    --text-dark: #333333;
+    --text-gray: #666666;
+    --border-color: #E2E8F0;
+}
+
+body {
+    background: var(--white);
+    min-height: 100vh;
+}
+.back-head {
+    justify-content: left;
+    align-items: center;
+    padding-top: 25px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding-left: 40px;
+    font-size: 25px;
+}
+
+
+.back-head:hover {
+    transform: translateY(-2px);
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Form Card */
+.form-card {
+    padding: 2rem;
+}
+
+/*.form-title {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--orange);
+    color: var(--white);
+    border-radius: 8px;
+} */
+
+.title-container {
+    /*เส้นใต้*/
+    justify-content: space-between;
+    /* ทำให้ข้อความอยู่คนละฝั่ง */
+    width: 50%;
+    /* กำหนดความกว้างของ container */
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.1px;
+    margin-bottom: 20px;
+    width: 50%;
+    margin-left: auto;
+    /* จัดให้อยู่กึ่งกลาง */
+    margin-right: auto;
+    /* จัดให้อยู่กึ่งกลาง */
+}
+
+.title-container a {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    /*เปลี่ยนสี hover ช้าลง*/
+    text-decoration: none;
+    /* ลบขีดเส้นใต้จากลิงก์ */
+    color: black;
+    /* เปลี่ยนสีข้อความ */
+    border-top-left-radius: 10px;
+    /* มุมซ้ายบนมน */
+    border-top-right-radius: 10px;
+    /* มุมขวาบนมน */
+    border-bottom-left-radius: 0;
+    /* มุมซ้ายล่างเหลี่ยม */
+    border-bottom-right-radius: 0;
+    /* มุมขวาล่างเหลี่ยม */
+    user-select: none;
+    /* ไม่ให้ข้อความถูกเลือก */
+}
+
+
+
+.head-title {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(171, 171, 171) ;
+    padding: 10px 20px;
+    border: 1px solid none;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.bg-gray {
+    background-color: #d0d0d0 !important;
+    color: rgb(28, 28, 28);
+}
+
+.nav-link.active {
+    background-color: #d0d0d0;
+    color: rgb(28, 28, 28);
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group textarea{
+    flex: 1; /* กำหนดให้ input ใช้พื้นที่ที่เหลือ */
+    padding: 1rem;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    /*box-shadow: 0 0 0 3px rgba(255,107,0,0.1); */
+    transition: box-shadow 0.3s ease;
+    width: 100%; /* ความกว้าง 100% ของ container */
+    height: 150px; /* ความสูงเริ่มต้น 150px */
+    resize: both; /* อนุญาตให้ปรับขนาดได้ทั้งแนวนอนและแนวตั้ง */
+}
+.form-group textarea:focus, .form-group input:focus, .form-group select:focus{
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(255,107,0,0.1);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.form-group input {
+    flex: 1; /* กำหนดให้ input ใช้พื้นที่ที่เหลือ */
+    padding: 1rem;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    /*box-shadow: 0 0 0 3px rgba(255,107,0,0.1); */
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.form-group select {
+    flex: 1; /* กำหนดให้ input ใช้พื้นที่ที่เหลือ */
+    padding: 1rem;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    /*box-shadow: 0 0 0 3px rgba(255,107,0,0.1); */
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.form-group .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 4.5rem;
+}
+
+.form-group .images img {
+    width: 180px; /* ความกว้าง */
+    height: 140px; /* ความสูง */
+    object-fit: cover; /* ปรับภาพให้พอดีกับกรอบ */
+    border-radius: 8px; /* ทำมุมโค้งเล็กน้อย */
+}
+
+.form-group .images .add-photo {
+    width: 180px; /* ความกว้าง */
+    height: 135px; /* ความสูง */
+    border: 2px dashed #E2E8F0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.form-group .images .add-photo:hover {
+    border-color: #FF6B00;
+    background-color: #F5F7FA;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.images img {
+    width: 180px;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.images img:hover {
+    border-color: orange;
+}
+
+.images img.selected {
+    border-color: #FF6B00;
+    box-shadow: 0 0 5px #FF6B00;
+}
+
+.images img.active {
+    border-color: #FF6B00;
+    box-shadow: 0 0 5px #FF6B00;
+}
+
+.add-photo {
+    position: relative;
+    width: 180px;
+    height: 135px;
+    border: 2px dashed #E2E8F0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-photo input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* ซ่อน input */
+    cursor: pointer;
+}
+
+.add-photo label {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.add-photo:hover {
+    border-color: #FF6B00;
+    background-color: #F5F7FA;
+}
+
+/* Inputs and Select */
+.form-input,
+.form-select,
+.file-upload {
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: var(--white);
+}
+.form-input:focus {
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(255,107,0,0.1);
+}
+
+/* Select Input */
+.images img.selected {
+    border-color: #FF6B00;
+    box-shadow: 0 0 5px #FF6B00;
+}
+
+.images img.active {
+    border-color: #FF6B00;
+    box-shadow: 0 0 5px #FF6B00;
+}
+
+/* File Upload */
+
+
+.file-upload:hover {
+    border-color: var(--orange);
+}
+
+.upload-icon {
+    font-size: 1.5rem;
+    color: var(--text-gray);
+}
+
+/* Submit Button */
+.submit-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    /* เพิ่มขอบของปุ่ม */
+    font-size: 16px;
+    /* ขนาดข้อความ */
+    background-color:#64d364;
+    /* สีพื้นหลัง */
+    color: white;
+    /* สีข้อความ */
+    border: none;
+    /* เอาเส้นขอบออก */
+    border-radius: 25px;
+    /* มุมมน */
+    cursor: pointer;
+    /* เปลี่ยนเมาส์เป็นลูกศร */
+    transition: background-color 0.3s ease;
+    /* เพิ่มเอฟเฟกต์เมื่อเลื่อนเมาส์ */
+    width: 100px;
+}
+
+.delete-btn {
+    padding: 10px 20px;
+    /* เพิ่มขอบของปุ่ม */
+    font-size: 16px;
+    /* ขนาดข้อความ */
+    background-color: white;
+    color: red;
+    /* สีข้อความ */
+    border: none;
+    /* เอาเส้นขอบออก */
+    border-radius: 25px;
+    /* มุมมน */
+    cursor: pointer;
+    /* เปลี่ยนเมาส์เป็นลูกศร */
+    transition: background-color 0.3s ease;
+    /* เพิ่มเอฟเฟกต์เมื่อเลื่อนเมาส์ */
+    width: 100px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+.delete-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    color: var(--text-gray);
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.back-btn:hover {
+    color: var(--orange);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem auto;
+    }
+
+    .form-card {
+        padding: 1rem;
+    }
+}
+
+#reward-label {
+    display: flex;
+    justify-content: space-between; /* จัดข้อความให้ขยายไปทั้งสองข้าง */
+    align-items: center; /* จัดให้ข้อความและหน่วยอยู่แนวเดียวกัน */
+}
+
+#reward-label-text {
+    flex-grow: 1; /* ทำให้ข้อความหลักขยายเต็มที่ */
+}
+
+#reward-unit {
+    margin-left: 5px;  /* เพิ่มระยะห่างระหว่างข้อความหลักกับหน่วย */
+    font-weight: normal; /* กำหนดให้หน่วยไม่หนา */
+}
+
+
+

@@ -1,0 +1,105 @@
+/* css/filter.css */
+
+/* Filter Button Styles */
+.filter-button {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #FF6F00;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  z-index: 1000;
+  transition: left 0.3s;
+}
+
+.filter-button.active {
+  left: 320px;
+}
+
+/* Filter Sidebar Styles */
+.filter-sidebar {
+  position: fixed;
+  left: -320px;
+  top: 0;
+  width: 320px;
+  height: 100vh;
+  background-color: #FF6F00;
+  padding: 20px;
+  z-index: 999;
+  transition: left 0.3s;
+  overflow-y: auto;
+}
+
+.filter-sidebar.show {
+  left: 0;
+}
+
+.filter-section {
+  margin-bottom: 30px;
+  color: white;
+}
+
+.filter-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-chip {
+  background-color: white;
+  color: #FF6F00;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+.filter-chip:hover {
+  background-color: #f0f0f0;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.filter-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.reset-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.apply-button {
+  background-color: white;
+  color: #FF6F00;
+}

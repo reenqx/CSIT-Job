@@ -1,0 +1,142 @@
+/* ปรับแต่งแถบเมนูหลัก */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1800px;
+  border-radius: 30px;
+  background-color: #ff7f27;
+  margin-top: 20px;
+}
+
+.first-menu {
+  padding-top:20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ปรับแต่งเมนูหลัก */
+.menu-item {
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  font-size: 14px;
+}
+
+.menu-item:hover {
+  color: white;
+}
+
+/* Active State (หมวดหมู่ที่ถูกเลือก) */
+.menu-item.active {
+  background: #ff7f27;
+  color: white;
+  border-radius: 10px;
+}
+
+.menu-item.active::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 80%;
+  background: white;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+.icon {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* ปรับแต่ง Subcategories */
+#subcategories-container {
+  display: flex;
+  /* ลดขนาดเส้นขอบให้พอดี */
+  width: 100%;
+  /* ให้กว้างเต็มพื้นที่ */
+  max-width: 1200px;
+  /* จำกัดขนาดสูงสุด */
+  align-items: flex-start;
+  /* จัดให้อยู่บนสุด */
+  justify-content: flex-start;
+  /* ชิดซ้าย */
+  flex-wrap: wrap;
+  /* ให้ subcategories ไม่บีบเกินไป */
+  padding: 15px;
+  /* เพิ่ม padding ให้สมดุล */
+  margin-left: 0;
+  /* ชิดซ้ายสุด */
+}
+
+/* ปรับ Subcategories */
+.sub-menu {
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+/* แสดง Subcategories */
+.sub-menu.show {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out;
+  /* เพิ่ม Animation */
+}
+
+/* เพิ่ม Animation เวลาแสดงเมนู */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-5px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* ปรับขนาดของ sub-item */
+.sub-item {
+  padding: 12px 20px;
+  height: 70px;
+  width: 250px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+/* เมื่อ Hover ที่ Sub Item */
+.sub-item:hover {
+  background: #ff7f27;
+  color: white;
+  border-radius: 30px;
+  transform: scale(1.05);
+  /* ทำให้ขยายเล็กน้อย */
+}

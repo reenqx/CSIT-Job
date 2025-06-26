@@ -1,0 +1,36 @@
+.headerTop {
+    background-color: #4E2A84;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerTop img {
+    height: 30px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer {
+    background-color: #4E2A84;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.headerTopImg {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* ระยะห่างระหว่างรูปภาพและข้อความ */
+}

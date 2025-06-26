@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff8a00, #8e44ad);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 650px;
+    width: 100%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+h2.text-center {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+form>*:not(button) {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px #ff8a00, 0 0 15px #8e44ad;
+}
+
+label {
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* กลุ่ม radio */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+    /* ระยะห่างกลุ่ม radio กับกลุ่มอื่น */
+}
+
+.radio-option input[type="radio"] {
+    accent-color: #ff8a00;
+}
+
+/* กล่องเฉพาะตาม role */
+.role-field {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #ff8a00, #8e44ad);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 576px) {
+    .radio-group {
+        flex-direction: column;
+    }
+}
+/* สำหรับลิงค์มีบัญชี */
+.signup-link {
+    text-align: center;
+    margin-top: 1rem;
+    /* หรือใช้ 15px ตามต้องการ */
+    font-size: 16px;
+    color: #fff;
+}
+
+.signup-link a {
+    color: #ff8a00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
